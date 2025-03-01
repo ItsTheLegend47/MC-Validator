@@ -11,10 +11,12 @@ func main() {
 	//		c.Redirect(302, "/jungle/")
 	//	})
 
-	router.Static("/", "./static/HTML")
+	router.StaticFile("/", "./static/HTML/index.html")
 	router.Static("/CSS/", "./static/CSS")
 	router.Static("/JS/", "./static/JS")
 	router.Static("/IMG/", "./static/IMG")
+	
+
 
 	router.NoRoute(func(c *gin.Context) {
 		c.String(404, "Womp Womp, file does not exist")
