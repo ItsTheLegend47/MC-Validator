@@ -27,6 +27,53 @@ body {
     max-height: 100%;
 }
 
+.startwindow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.startwindow > img {
+  height: 80px;
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.startwindow > progress {
+  width: 100px;
+  margin: 15px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.startwindow > p {
+  font-family: "Pixelated MS Sans Serif",Arial;
+  text-align:center;
+  font-size:20px;
+  margin: 10px;
+}
+
+.results-window {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bor
+}
+
+.results-window > p {
+  font-family: "Pixelated MS Sans Serif",Arial;
+  text-align:center;
+  font-size: 40px;
+  margin: 10px;
+}
+
 .taskbar { 
     height: 50px; 
     position: fixed; 
@@ -77,14 +124,6 @@ body {
     cursor:move;
 }
 
-.grassblock {
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom:50px;
-  
-}
-
 .text {
  font-family: "Pixelated MS Sans Serif",Arial;
  text-align:center;
@@ -124,6 +163,10 @@ body {
     border: 1px solid #000000;
     word-wrap: break-word;
 
+}
+
+.row > p.failed {
+  color: red;
 }
 
 .modname {

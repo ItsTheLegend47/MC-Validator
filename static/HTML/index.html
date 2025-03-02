@@ -24,14 +24,18 @@
             </div>
         </div>
         <div class="window-body">
-            <image src="/IMG/grass.png" height="80" width="80" class="grassblock"></image>
-            <p class="text">Submit a zip file blah blah blah</p>
-            <div>
-                <form action="/upload" method="post" enctype="multipart/form-data" style="text-align:center">
-                    <input type="file" name="file" id="fileinput"> 
-                </form>
+            <div class="startwindow" id="startwindow">
+              <img src="/IMG/grass.png"></img>
+              <p>Upload your modpack to start!</p>
+              <progress id="progress" class="hidden"></progress>
+              <form id="form" action="/upload" method="post" enctype="multipart/form-data" style="text-align:center">
+                <input type="file" name="file" id="fileinput"> 
+              </form>
             </div>
-            <br><br><br><br><br><br><br>
+            <div class="results-window hidden" id="results-window">
+              <p id="result-text"> Results: </p>
+            </div>
+            
             <div class="results" id="results-box">
 
             </div>
