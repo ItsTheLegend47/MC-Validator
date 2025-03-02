@@ -100,3 +100,38 @@ function addResultElement(i_name, i_filename, i_hash, passed){
   results_box.appendChild(row);
   
 }
+
+
+const input = document.getElementById('fileinput');
+
+
+const upload = (file) => {
+  const formData  = new FormData();
+  
+  formData.append("file", file);
+
+  fetch(window.location + 'upload', { 
+    method: 'POST',
+    body: formData,
+  }).then(
+    response => {
+      response.json().then(
+        data => {
+          for (i in data) {
+            item = data[i]
+            addResultElement(item["Name"],item["Filename"],item["Hash"],item["Found"]);
+          }
+        } 
+      )
+    }
+  ).catch(
+    error => console.log(error)
+  );
+};
+
+// Event handler executed when a file is selected
+const onSelectFile = () => upload(input.files[0]);
+
+// Add a listener on your input
+// It will be triggered when a file will be selected
+input.addEventListener('change', onSelectFile, false);

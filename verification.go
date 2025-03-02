@@ -9,6 +9,7 @@ import (
 
 type mod struct {
 	Hash              string
+	Name              string
 	Filename          string
 	Expected_filename string
 	Source_url        string

@@ -31,7 +31,7 @@ func handle_upload(c *gin.Context) {
 	moddata, _ := getModHashes(path)
 	for _, data := range moddata {
 		version_file := checkModrinth(data.Hash)
-		modfile := mod{Hash: data.Hash, Filename: data.Filename, Expected_filename: version_file.Filename, Source_url: version_file.Url, Found: version_file.Found}
+		modfile := mod{Hash: data.Hash, Filename: data.Filename, Expected_filename: version_file.Filename, Source_url: version_file.Url, Found: version_file.Found, Name: version_file.Name}
 		mods = append(mods, modfile)
 	}
 
