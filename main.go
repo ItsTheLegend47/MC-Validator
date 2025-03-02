@@ -12,11 +12,12 @@ func main() {
 	//	})
 
 	router.StaticFile("/", "./static/HTML/index.html")
+
 	router.Static("/CSS/", "./static/CSS")
 	router.Static("/JS/", "./static/JS")
 	router.Static("/IMG/", "./static/IMG")
-	
 
+	router.POST("/upload", handle_upload)
 
 	router.NoRoute(func(c *gin.Context) {
 		c.String(404, "Womp Womp, file does not exist")
