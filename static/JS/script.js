@@ -70,7 +70,7 @@ window.addEventListener("load", () => {
     }
 });
 
-function addResultElement(i_name, i_filename, i_hash, passed) {
+function addResultElement(i_name, i_filename, i_hash, i_url, passed) {
 
     results_box = document.getElementById('results-box');
 
@@ -79,7 +79,6 @@ function addResultElement(i_name, i_filename, i_hash, passed) {
 
     modname = document.createElement("p");
     modname.classList.add("modname");
-    modname.innerHTML = i_name;
     row.appendChild(modname);
 
     filename = document.createElement("p");
@@ -96,7 +95,13 @@ function addResultElement(i_name, i_filename, i_hash, passed) {
     icon.classList.add("icon")
     if (passed) {
         icon.src = "/IMG/check.png";
+        link = document.createElement("a");
+        link.innerHTML = i_name
+        link.href = i_url
+        link.target = "_blank"
+        modname.appendChild(link)
     } else {
+        modname.innerHTML = i_name;
         icon.src = "/IMG/no.png";
         hash.classList.add('failed')
         filename.classList.add('failed')
@@ -144,7 +149,7 @@ const upload = (file) => {
 
                     for (i in data) {
                         item = data[i]
-                        addResultElement(item["Name"], item["Filename"], item["Hash"], item["Found"]);
+                        addResultElement(item["Name"], item["Filename"], item["Hash"], item["Source_url"], item["Found"]);
                         if (!item["Found"]) {
                             failed = true;
                         }

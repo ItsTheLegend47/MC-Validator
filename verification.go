@@ -87,7 +87,7 @@ func checkModrinth(hash string) version_file {
 
 	var name = data.Name
 	var filename = data.Files[0].Filename
-	var url = data.Files[0].URL
+	var url = fmt.Sprintf("https://modrinth.com/mod/%s", data.ProjectID)
 
 	return version_file{Found: true, Name: name, Filename: filename, Url: url}
 
