@@ -1,9 +1,3 @@
-
-
-
-
-
-
 dragElement(document.getElementById("window"));
 
 function dragElement(elmnt) {
@@ -71,3 +65,38 @@ window.addEventListener("load", () => {
     setTimeout(clock, 1000);
   }
 });
+
+function addResultElement(i_name, i_filename, i_hash, passed){
+  
+  results_box = document.getElementById('results-box');
+
+  row = document.createElement("div");
+  row.classList.add("row");
+
+  modname = document.createElement("p");
+  modname.classList.add("modname");
+  modname.innerHTML = i_name;
+  row.appendChild(modname);
+
+  filename = document.createElement("p");
+  filename.classList.add("modname");
+  filename.innerHTML = i_filename;
+  row.appendChild(filename);
+
+  hash = document.createElement("p");
+  hash.classList.add("hash");
+  hash.innerHTML = i_hash;
+  row.appendChild(hash);
+
+  icon = document.createElement("img");
+  icon.classList.add("icon")
+  if (passed) {
+    icon.src = "/IMG/check.png";
+  } else {
+    icon.src = "/IMG/no.png";
+  }
+  row.appendChild(icon) 
+
+  results_box.appendChild(row);
+  
+}

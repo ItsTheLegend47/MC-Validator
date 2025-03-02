@@ -15,10 +15,17 @@ body {
     max-width: 75%; 
     width: 75%; 
     height: 75%; 
-    max-height: 75%; 
+    max-height: 75%;
     position:absolute;
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: hidden; 
+}
+:
+.window-body {
+    max-width: 75%; 
+    width: 75%; 
+    height: 75%; 
+    max-height: 75%;
 }
 
 .taskbar { 
@@ -124,6 +131,7 @@ body {
     width:100px;
     padding:10px
 }
+
 .hash {
     width:625px;
     padding:10px;
@@ -132,8 +140,9 @@ body {
 
 .icon {
     width: 50px;
-
+    height: 50px;
 }
+
 
 
 
