@@ -14,7 +14,7 @@
 
    
 
-    <div class="window" id="window" style="width: 75%; position:absolute;">
+    <div class="window" id="window">
         <div class="title-bar" id="windowheader">
           <div class="title-bar-text">MC Mod Validator</div>
           <div class="title-bar-controls">
@@ -29,19 +29,44 @@
             <div>
             <form action="/upload" method="post" enctype="multipart/form-data" style="text-align:center">
                 <input type="file" name="file">
-                <input type="submit">
+                <input type="submit" style="background-color: green; position:absolute; top:250px; right:45%; padding: 20px;">
               </form>
+              </div>
+                <br><br><br><br><br><br><br>
+              <div class="results"> 
+                <div class="row">
+                  <p class="modname">Advanced AE</p>
+                  <p class="modname">AdvancedAE-0.9.0-1.20.1-beta.jar</p>
+                  <p class="hash">aegvueeoiahehrq3yr897q3y4y9875qy34987yvq874y5wb987e4yt0q8b7v4yt98bw74ybtq87yq3487y58q7y459873y445987wy48b975yb98437w5y9bq874by5qq7384y5987q4byvv5897y34b5879ywb7485y79843y587wyvbn9847yw987y4987wyb4n7</p>
+                  <p class="icon"><img src="/IMG/check.png" height="50px" width="50px"></p>
+                </div>
+                <div class="row">
+                  <p class="modname">Advanced AE</p>
+                  <p class="modname">AdvancedAE-0.9.0-1.20.1-beta.jar</p>
+                  <p class="hash">aegvueeoiahehrq3yr897q3y4y9875qy34987yvq874y5wb987e4yt0q8b7v4yt98bw74ybtq87yq3487y58q7y459873y445987wy48b975yb98437w5y9bq874by5qq7384y5987q4byvv5897y34b5879ywb7485y79843y587wyvbn9847yw987y4987wyb4n7</p>
+                  <p class="icon"><img src="/IMG/no.png" height="50px" width="50px"></p>
+                </div>
               </div>
         </div>
       </div>
-   
+      
     
 
     <div class="taskbar">
         <div class="startbutton">
+          <img src="/IMG/icon.png" height="35" width="35" class="winicon">
           <p class="startbuttonelement">start</p>
         </div>
-        
+        <img src="IMG/explorericon.png" height="75" width="75" style="position:absolute; bottom:-12px; left:175px; "></img>
+        <div class="clockarea"> 
+          <img src="/IMG/audioicon.png" height="50" width="50" style="position:absolute; top:5px; left:30px; "></img>
+          <img src="/IMG/interneticon.png" height="50" width="50" style="position:absolute; top:5px; left:0px; "></img>
+          <div id="clock">
+            <h1 class = "clocktext" id="date-time"></h1>
+          </div>
+          
+
+        </div>
     </div>
       <script src='/JS/script.js'></script>
 </body>
