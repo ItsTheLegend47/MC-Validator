@@ -64,7 +64,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bor
 }
 
 .results-window > p {
@@ -170,19 +169,19 @@ body {
 }
 
 .modname {
-    width:100px;
-    padding:10px
+  width:15%;
+ 
 }
 
 .hash {
-    width:625px;
-    padding:10px;
+  width:58%;
+  padding-left:2%;
+
 
 }
 
 .icon {
-    width: 50px;
-    height: 50px;
+  width: 10%
 }
 
 
