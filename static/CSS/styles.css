@@ -17,15 +17,14 @@ body {
     height: 75%; 
     max-height: 75%;
     position:absolute;
-    overflow-y: scroll;
-    overflow-x: hidden; 
+    display: flex;
+    flex-direction: column;
 }
-:
+
 .window-body {
-    max-width: 75%; 
-    width: 75%; 
-    height: 75%; 
-    max-height: 75%;
+    margin-top: 0px; 
+    overflow-y: scroll; 
+    max-height: 100%;
 }
 
 .taskbar { 

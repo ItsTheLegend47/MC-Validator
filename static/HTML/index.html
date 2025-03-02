@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -8,55 +9,51 @@
     <link rel="icon" type="image/x-icon" href="/IMG/grass.png">
     <link rel='stylesheet' type='text/css' media='screen' href='/CSS/styles.css'>
     <link rel="stylesheet" href="https://unpkg.com/xp.css" />
-  
-</head>
-<body>
 
-   
+</head>
+
+<body>
 
     <div class="window" id="window">
         <div class="title-bar" id="windowheader">
-          <div class="title-bar-text">MC Mod Validator</div>
-          <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
-            <button aria-label="Close"></button>
-          </div>
+            <div class="title-bar-text">MC Mod Validator</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
         </div>
         <div class="window-body">
             <image src="/IMG/grass.png" height="80" width="80" class="grassblock"></image>
-            <p class = "text">Submit a zip file blah blah blah</p>
+            <p class="text">Submit a zip file blah blah blah</p>
             <div>
-            <form action="/upload" method="post" enctype="multipart/form-data" style="text-align:center">
-                <input type="file" name="file" id="fileinput">
-                <input type="submit" style="background-color: green; position:absolute; top:250px; right:45%; padding: 20px;">
-              </form>
-              </div>
-                <br><br><br><br><br><br><br>
-              <div class="results" id="results-box"> 
-                              
-              </div>
+                <form action="/upload" method="post" enctype="multipart/form-data" style="text-align:center">
+                    <input type="file" name="file" id="fileinput"> 
+                </form>
+            </div>
+            <br><br><br><br><br><br><br>
+            <div class="results" id="results-box">
+
+            </div>
         </div>
-      </div>
-      
-    
+    </div>
 
     <div class="taskbar">
         <div class="startbutton">
-          <img src="/IMG/icon.png" height="35" width="35" class="winicon">
-          <p class="startbuttonelement">start</p>
+            <img src="/IMG/icon.png" height="35" width="35" class="winicon">
+            <p class="startbuttonelement">start</p>
         </div>
         <img src="IMG/explorericon.png" height="75" width="75" style="position:absolute; bottom:-12px; left:175px; "></img>
-        <div class="clockarea"> 
-          <img src="/IMG/audioicon.png" height="50" width="50" style="position:absolute; top:5px; left:30px; "></img>
-          <img src="/IMG/interneticon.png" height="50" width="50" style="position:absolute; top:5px; left:0px; "></img>
-          <div id="clock">
-            <h1 class = "clocktext" id="date-time"></h1>
-          </div>
-          
+        <div class="clockarea">
+            <img src="/IMG/audioicon.png" height="50" width="50" style="position:absolute; top:5px; left:30px; "></img>
+            <img src="/IMG/interneticon.png" height="50" width="50" style="position:absolute; top:5px; left:0px; "></img>
+            <div id="clock">
+                <h1 class="clocktext" id="date-time"></h1>
+            </div>
 
-</div>
-  </div>
-      <script src='/JS/script.js'></script>
+        </div>
+    </div>
+    <script src='/JS/script.js'></script>
 </body>
+
 </html>
